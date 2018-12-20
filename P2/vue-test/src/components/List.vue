@@ -21,7 +21,7 @@
 
 <script>
   import { listsAllCharacters } from '../services/got.service.js'
-
+  
   export default {
     name: 'list-component',
 
@@ -31,7 +31,8 @@
     data () {
       return {
         characters: [],
-        isLoading: false
+        isLoading: false,
+       
       }
     },
 
@@ -59,6 +60,9 @@
        */
       goToDetail(id) {
         // CODE HERE
+       
+        
+       this.$router.push({name:'detail', params:{'id':id}});
       }
     }
   }
